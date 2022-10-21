@@ -6,14 +6,15 @@
 }
 int getDegree(int a, int b)
 {
-    int degree = a;
+    int degree = a;    
     for (int i = 1; i < b; i++)
     {
         degree *= a;
     }
-    return degree;
+    return degree;    
 }
 
 int baseOfDegree = getValue("Введите основание степени: ");
 int degreeValue = getValue("Введите значение степени: ");
-Console.WriteLine(getDegree(baseOfDegree, degreeValue));
+if (degreeValue > 0) Console.WriteLine(getDegree(baseOfDegree, degreeValue));
+else Console.WriteLine("Error");
